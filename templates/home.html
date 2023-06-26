@@ -11,9 +11,16 @@
     
     {% extends 'template.html' %}
 
-  {% block content %}
-    <h1>{% block title %} Welcome to my Blog {% endblock %}</h1>
-  {% endblock %}
+{% block content %}
+    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+    {% for post in posts %}
+        <a href="#">
+            <h2>{{ post['title'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ post['created'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
  
   </body>
 </html>
