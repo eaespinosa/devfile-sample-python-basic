@@ -9,7 +9,11 @@
   </head>
   <body>
     
-    <h1> Welcome to  my Blog </h1>
+    {% extends 'template.html' %}
+
+  {% block content %}
+    <h1>{% block title %} Welcome to my Blog {% endblock %}</h1>
+  {% endblock %}
  
   </body>
 </html>
