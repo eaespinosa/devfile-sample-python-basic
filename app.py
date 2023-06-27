@@ -11,6 +11,10 @@ def hello():
 def about():
     return render_template("about.html")
 
+@app.route('/create')
+def create():
+    return render_template("create.html")
+
 
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
